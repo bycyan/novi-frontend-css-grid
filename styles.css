@@ -1,1 +1,115 @@
 /*Maak hier jouw CSS!*/
+
+:root{
+    --primary: #FFEFDB;
+    --secodary: #BA3B44;
+}
+
+body{
+    margin: 0;
+    padding: 16px;
+    background-color: var(--primary);
+    color: var(--primary);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap: 16px;
+    height: 100%;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--secodary);
+}
+
+    .item-a {
+        grid-row: 1;
+        height: 50px;
+    }
+
+    .item-b {
+        grid-row: 2;
+    }
+
+    .item-c {
+        grid-row: 3;
+        height: 50px;
+    }
+
+    .item-d {
+        grid-row: 4;
+        height: 50px;
+    }
+
+    .item-e {
+        grid-row: 5;
+        min-height: 50px;
+    }
+
+    .item-f {
+        grid-row: 7;
+        height: 50px;
+    }
+
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(50px, auto);
+        grid-gap: 16px;
+        height: 100%;
+    }
+
+    .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        background-color: var(--secodary);
+    }
+
+    .item-a {
+        grid-row: 1;
+        grid-column: 1/1;
+        height: 50px;
+    }
+
+    .item-b {
+        grid-row: 2/5;
+        grid-column: 1;
+        align-items: start;
+    }
+
+    .item-c {
+        grid-row: 1/3;
+        grid-column: 2/4;
+        height: 240px;
+    }
+
+    .item-d {
+        grid-row: 3;
+        grid-column: 3/4;
+        height: 100px;
+        align-self: start;
+    }
+
+    .item-e {
+        grid-row: 3/5;
+        grid-column: 2/3;
+    }
+
+    .item-f {
+        grid-column: 1 / 4;
+        grid-row: 5;
+        height: 50px;
+    }
+
+}
